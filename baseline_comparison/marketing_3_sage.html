@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+details {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  background-color: #fafafa;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #aaa;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+<h2>Data Summaries</h2>
+<p>Click each title below to expand or collapse the data summary.</p>
+
+<details>
+  <summary>Summary 1: Count Complain by Accepted Third Campaign</summary>
+  <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>AcceptedCmp3</th>
+    </tr>
+    <tr>
+      <th>Complain</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2219</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>21</td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+<details>
+  <summary>Summary 2: Count Birth Year by Complain and Response</summary>
+  <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Response</th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+    <tr>
+      <th>Complain</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1888</td>
+      <td>331</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+<details>
+  <summary>Summary 3: Average the Income by Country and Marital Status</summary>
+  <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Marital_Status</th>
+      <th>Absurd</th>
+      <th>Alone</th>
+      <th>Divorced</th>
+      <th>Married</th>
+      <th>Single</th>
+      <th>Together</th>
+      <th>Widow</th>
+      <th>YOLO</th>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>AUS</th>
+      <td>79244.0</td>
+      <td>NaN</td>
+      <td>52849.000000</td>
+      <td>53184.121212</td>
+      <td>48596.833333</td>
+      <td>49441.810811</td>
+      <td>52952.800000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>CA</th>
+      <td>65487.0</td>
+      <td>43789.0</td>
+      <td>47450.444444</td>
+      <td>54185.730769</td>
+      <td>55017.413793</td>
+      <td>51663.727273</td>
+      <td>58147.333333</td>
+      <td>48432.0</td>
+    </tr>
+    <tr>
+      <th>GER</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>53733.166667</td>
+      <td>49516.839286</td>
+      <td>56089.111111</td>
+      <td>56076.031250</td>
+      <td>60737.000000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>IND</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>49798.200000</td>
+      <td>52234.421053</td>
+      <td>45510.540541</td>
+      <td>44733.263158</td>
+      <td>74470.750000</td>
+      <td>48432.0</td>
+    </tr>
+    <tr>
+      <th>ME</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>61564.500000</td>
+      <td>49912.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>SA</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>53982.382979</td>
+      <td>53367.575472</td>
+      <td>54266.357143</td>
+      <td>57851.480392</td>
+      <td>48696.166667</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>SP</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>52713.915094</td>
+      <td>50909.346420</td>
+      <td>49034.628692</td>
+      <td>53567.806569</td>
+      <td>56508.720930</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>US</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>60885.687500</td>
+      <td>49480.685714</td>
+      <td>55373.612903</td>
+      <td>49908.652174</td>
+      <td>61945.000000</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+</body>
+</html>
