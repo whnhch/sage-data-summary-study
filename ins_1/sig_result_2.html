@@ -7,19 +7,6 @@
       font-family: Arial, sans-serif;
       margin: 30px;
     }
-    summary {
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    details {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px 15px;
-      margin-bottom: 15px;
-      background-color: #fafafa;
-    }
     table {
       border-collapse: collapse;
       width: 100%;
@@ -28,39 +15,73 @@
     th, td {
       border: 1px solid #aaa;
       padding: 6px 10px;
-      text-align: center;
     }
-    th.index-name {
+    th.row_heading {
       text-align: left;
       background-color: #f7f7f7;
     }
-    th.column-name {
+    th.col_heading {
       text-align: right;
       background-color: #f7f7f7;
-    }
-    th {
-      background-color: #f2f2f2;
     }
     </style>
     </head>
     <body>
 
-    <h2>Data Summaries</h2>
-    <p>Click each title below to expand or collapse the data summary.</p>
-
     <div class="section">
-      <h3>Summary : Average Released Year by Number of Votes and Actor</h3>
+      <h3>Summary: Average Released Year by Number of Votes and Actor</h3>
       <p><b>Aggregation:</b> mean</p>
 
-      <table class="dataframe">
-        <thead>
-          <tr>
-            <th class="index-name">Number of Votes</th>
-            <th class="column-name">Aamir Khan, Aaron Taylor-Johnson, Abhay Deol, Abraham Attah, Adam Driver, Adrian Molina, Adrien Brody, Ajay Devgn, Akshay Kumar, Al Pacino, Alain Delon, Alan Mak, Alec Guinness, Alejandro Jodorowsky, Aleksandr Antonov, Aleksey Kravchenko, Aleksey Serebryakov, Alia Bhatt, Alicia Vikander, Alisa Freyndlikh</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <table class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Star1</th>
+      <th>Aamir Khan</th>
+      <th>Aaron Taylor-Johnson</th>
+      <th>Abhay Deol</th>
+      <th>Abraham Attah</th>
+      <th>Adam Driver</th>
+      <th>Adrian Molina</th>
+      <th>Adrien Brody</th>
+      <th>Ajay Devgn</th>
+      <th>Akshay Kumar</th>
+      <th>Al Pacino</th>
+      <th>Alain Delon</th>
+      <th>Alan Mak</th>
+      <th>Alec Guinness</th>
+      <th>Alejandro Jodorowsky</th>
+      <th>Aleksandr Antonov</th>
+      <th>Aleksey Kravchenko</th>
+      <th>Aleksey Serebryakov</th>
+      <th>Alia Bhatt</th>
+      <th>Alicia Vikander</th>
+      <th>Alisa Freyndlikh</th>
+    </tr>
+    <tr>
+      <th>Number of Votes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
       <th>25088</th>
       <td>NaN</td>
@@ -523,7 +544,6 @@
     </tr>
   </tbody>
 </table>
-      </table>
     </div>
 
     </body>

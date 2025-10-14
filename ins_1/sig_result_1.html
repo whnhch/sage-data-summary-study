@@ -7,19 +7,6 @@
       font-family: Arial, sans-serif;
       margin: 30px;
     }
-    summary {
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    details {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px 15px;
-      margin-bottom: 15px;
-      background-color: #fafafa;
-    }
     table {
       border-collapse: collapse;
       width: 100%;
@@ -28,39 +15,35 @@
     th, td {
       border: 1px solid #aaa;
       padding: 6px 10px;
-      text-align: center;
     }
-    th.index-name {
+    th.row_heading {
       text-align: left;
       background-color: #f7f7f7;
     }
-    th.column-name {
+    th.col_heading {
       text-align: right;
       background-color: #f7f7f7;
-    }
-    th {
-      background-color: #f2f2f2;
     }
     </style>
     </head>
     <body>
 
-    <h2>Data Summaries</h2>
-    <p>Click each title below to expand or collapse the data summary.</p>
-
     <div class="section">
-      <h3>Summary : Average Gross by Genre in IMDB data</h3>
+      <h3>Summary: Average Gross by Genre in IMDB data</h3>
       <p><b>Aggregation:</b> mean</p>
 
-      <table class="dataframe">
-        <thead>
-          <tr>
-            <th class="index-name">Genre</th>
-            <th class="column-name">Gross</th>
-          </tr>
-        </thead>
-        <tbody>
-          
+      <table class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Gross</th>
+    </tr>
+    <tr>
+      <th>Genre</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
       <th>Action, Adventure</th>
       <td>2.295072e+08</td>
@@ -143,7 +126,6 @@
     </tr>
   </tbody>
 </table>
-      </table>
     </div>
 
     </body>
