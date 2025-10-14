@@ -15,118 +15,84 @@
     th, td {
       border: 1px solid #aaa;
       padding: 6px 10px;
+      text-align: center;
     }
-    th.row_heading {
+    th.index-name {
       text-align: left;
       background-color: #f7f7f7;
     }
-    th.col_heading {
+    th.col-heading {
       text-align: right;
       background-color: #f7f7f7;
+    }
+    th.agg-info {
+      text-align: left;
+      font-weight: bold;
+      background-color: #e9e9e9;
+    }
+    th.col-attr {
+      text-align: right;
+      font-weight: bold;
+      background-color: #e9e9e9;
     }
     </style>
     </head>
     <body>
 
-    <div class="section">
-      <h3>Summary: Average Gross by Genre in IMDB data</h3>
-      <p><b>Aggregation:</b> mean</p>
+    <h2>Data Summary</h2>
+    <p>Average Gross by Genre in IMDB data</p>
 
-      <table class="dataframe dataframe">
-  <thead>
-    <tr style="text-align: center;">
-      <th></th>
-      <th>Gross</th>
-    </tr>
-    <tr>
-      <th>Genre</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
+    <table class="dataframe">
+      <thead>
+      <tr>
+        <th class="agg-info">mean of Gross</th>
+        <th class="col-attr" colspan="1"></th>
+      </tr>
+    <tr><th class='index-name'>Genre</th><th class='col-heading'>Gross</th></tr></thead>
+      
     <tr>
       <th>Action, Adventure</th>
-      <td>2.295072e+08</td>
+      <td>229.51M</td>
     </tr>
     <tr>
       <th>Action, Adventure, Comedy</th>
-      <td>2.133793e+08</td>
+      <td>213.38M</td>
     </tr>
     <tr>
       <th>Action, Adventure, Drama</th>
-      <td>2.224030e+08</td>
+      <td>222.40M</td>
     </tr>
     <tr>
       <th>Action, Adventure, Family</th>
-      <td>3.019592e+08</td>
+      <td>301.96M</td>
     </tr>
     <tr>
       <th>Action, Adventure, Fantasy</th>
-      <td>3.527235e+08</td>
+      <td>352.72M</td>
     </tr>
     <tr>
       <th>Action, Adventure, History</th>
-      <td>5.371002e+07</td>
+      <td>53.71M</td>
     </tr>
     <tr>
       <th>Action, Adventure, Horror</th>
-      <td>5.100000e+06</td>
+      <td>5.10M</td>
     </tr>
     <tr>
       <th>Action, Adventure, Mystery</th>
-      <td>2.090287e+08</td>
+      <td>209.03M</td>
     </tr>
     <tr>
       <th>Action, Adventure, Romance</th>
-      <td>3.981000e+06</td>
+      <td>3.98M</td>
     </tr>
     <tr>
       <th>Action, Adventure, Sci-Fi</th>
-      <td>2.808885e+08</td>
-    </tr>
-    <tr>
-      <th>Action, Adventure, Thriller</th>
-      <td>1.686118e+08</td>
-    </tr>
-    <tr>
-      <th>Action, Adventure, War</th>
-      <td>4.530000e+07</td>
-    </tr>
-    <tr>
-      <th>Action, Adventure, Western</th>
-      <td>8.484736e+06</td>
-    </tr>
-    <tr>
-      <th>Action, Biography, Crime</th>
-      <td>2.151978e+07</td>
-    </tr>
-    <tr>
-      <th>Action, Biography, Drama</th>
-      <td>4.274038e+07</td>
-    </tr>
-    <tr>
-      <th>Action, Comedy, Crime</th>
-      <td>2.598444e+07</td>
-    </tr>
-    <tr>
-      <th>Action, Comedy, Fantasy</th>
-      <td>8.722125e+07</td>
-    </tr>
-    <tr>
-      <th>Action, Comedy, Mystery</th>
-      <td>2.363726e+07</td>
-    </tr>
-    <tr>
-      <th>Action, Comedy, Romance</th>
-      <td>9.773750e+05</td>
-    </tr>
-    <tr>
-      <th>Action, Crime, Comedy</th>
-      <td>3.296000e+03</td>
+      <td>280.89M</td>
     </tr>
   </tbody>
 </table>
-    </div>
+    </table>
 
     </body>
     </html>
