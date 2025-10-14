@@ -1,0 +1,99 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  max-width: 900px;
+}
+table {
+  border-collapse: collapse;
+  width: auto;
+  max-width: 100%;
+  margin-top: 10px;
+  table-layout: auto;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid #aaa;
+  padding: 4px 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+th.index-name, th.col-heading {
+  text-align: left;
+  background-color: #f7f7f7;
+}
+th.agg-info, th.col-attr {
+  text-align: left;
+  font-weight: bold;
+  background-color: #e9e9e9;
+}
+.dataframe {
+  display: block;
+  overflow-x: auto;
+}
+</style>
+</head>
+    <body>
+
+    <h2>Data Summary</h2>
+    <p>Average of Income group by Marital Status and Education</p>
+
+    <table class="dataframe">
+      <thead>
+      <tr>
+        <th class="agg-info">Average of Income</th>
+        <th class="col-attr" colspan="5">Marital Status</th>
+      </tr>
+    <tr><th class='index-name'>Education</th><th class='col-heading'>Absurd</th><th class='col-heading'>Alone</th><th class='col-heading'>Divorced</th><th class='col-heading'>Married</th><th class='col-heading'>Single</th></tr></thead>
+      
+    <tr>
+      <th>High School</th>
+      <td>50.00K</td>
+      <td>75.00K</td>
+      <td>100.00K</td>
+      <td>125.00K</td>
+      <td>150.00K</td>
+    </tr>
+    <tr>
+      <th>Some College</th>
+      <td>200.00K</td>
+      <td>162.00K</td>
+      <td>125.00K</td>
+      <td>88.00K</td>
+      <td>50.00K</td>
+    </tr>
+    <tr>
+      <th>Bachelor</th>
+      <td>60.00K</td>
+      <td>75.00K</td>
+      <td>90.00K</td>
+      <td>105.00K</td>
+      <td>120.00K</td>
+    </tr>
+    <tr>
+      <th>Master</th>
+      <td>3.00M</td>
+      <td>3.50M</td>
+      <td>4.00M</td>
+      <td>4.50M</td>
+      <td>5.00M</td>
+    </tr>
+    <tr>
+      <th>PhD</th>
+      <td>5.00M</td>
+      <td>4.50M</td>
+      <td>4.00M</td>
+      <td>3.50M</td>
+      <td>3.00M</td>
+    </tr>
+  </tbody>
+</table>
+    </table>
+
+    </body>
+    </html>
+    

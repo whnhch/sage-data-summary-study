@@ -1,0 +1,99 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  max-width: 900px;
+}
+table {
+  border-collapse: collapse;
+  width: auto;
+  max-width: 100%;
+  margin-top: 10px;
+  table-layout: auto;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid #aaa;
+  padding: 4px 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+th.index-name, th.col-heading {
+  text-align: left;
+  background-color: #f7f7f7;
+}
+th.agg-info, th.col-attr {
+  text-align: left;
+  font-weight: bold;
+  background-color: #e9e9e9;
+}
+.dataframe {
+  display: block;
+  overflow-x: auto;
+}
+</style>
+</head>
+    <body>
+
+    <h2>Data Summary</h2>
+    <p>Average of Income group by Marital Status and Education</p>
+
+    <table class="dataframe">
+      <thead>
+      <tr>
+        <th class="agg-info">Average of Income</th>
+        <th class="col-attr" colspan="5">Marital Status</th>
+      </tr>
+    <tr><th class='index-name'>Education</th><th class='col-heading'>Absurd</th><th class='col-heading'>Alone</th><th class='col-heading'>Divorced</th><th class='col-heading'>Married</th><th class='col-heading'>Single</th></tr></thead>
+      
+    <tr>
+      <th>High School</th>
+      <td>68.69K</td>
+      <td>111.93K</td>
+      <td>133.02K</td>
+      <td>146.97K</td>
+      <td>10.00M</td>
+    </tr>
+    <tr>
+      <th>Some College</th>
+      <td>124.48K</td>
+      <td>162.54K</td>
+      <td>189.50K</td>
+      <td>170.52K</td>
+      <td>42.75K</td>
+    </tr>
+    <tr>
+      <th>Bachelor</th>
+      <td>109.15K</td>
+      <td>115.72K</td>
+      <td>134.65K</td>
+      <td>85.77K</td>
+      <td>117.44K</td>
+    </tr>
+    <tr>
+      <th>Master</th>
+      <td>4.92M</td>
+      <td>4.87M</td>
+      <td>4.93M</td>
+      <td>3.03M</td>
+      <td>3.81M</td>
+    </tr>
+    <tr>
+      <th>PhD</th>
+      <td>5.45M</td>
+      <td>4.47M</td>
+      <td>3.07M</td>
+      <td>4.83M</td>
+      <td>3.26M</td>
+    </tr>
+  </tbody>
+</table>
+    </table>
+
+    </body>
+    </html>
+    

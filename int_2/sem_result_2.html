@@ -1,0 +1,99 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  max-width: 900px;
+}
+table {
+  border-collapse: collapse;
+  width: auto;
+  max-width: 100%;
+  margin-top: 10px;
+  table-layout: auto;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid #aaa;
+  padding: 4px 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+th.index-name, th.col-heading {
+  text-align: left;
+  background-color: #f7f7f7;
+}
+th.agg-info, th.col-attr {
+  text-align: left;
+  font-weight: bold;
+  background-color: #e9e9e9;
+}
+.dataframe {
+  display: block;
+  overflow-x: auto;
+}
+</style>
+</head>
+    <body>
+
+    <h2>Data Summary</h2>
+    <p>Sum of Year Birth group by Marital Status and Education</p>
+
+    <table class="dataframe">
+      <thead>
+      <tr>
+        <th class="agg-info">Sum of Year Birth</th>
+        <th class="col-attr" colspan="5">Marital Status</th>
+      </tr>
+    <tr><th class='index-name'>Education</th><th class='col-heading'>MRT_STAT_0</th><th class='col-heading'>MRT_STAT_1</th><th class='col-heading'>MRT_STAT_2</th><th class='col-heading'>MRT_STAT_3</th><th class='col-heading'>MRT_STAT_4</th></tr></thead>
+      
+    <tr>
+      <th>EDU_0</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>45183.0</td>
+      <td>159825.0</td>
+      <td>73025.0</td>
+    </tr>
+    <tr>
+      <th>EDU_1</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1976.0</td>
+      <td>39565.0</td>
+      <td>35692.0</td>
+    </tr>
+    <tr>
+      <th>EDU_2</th>
+      <td>1993.0</td>
+      <td>1988.0</td>
+      <td>234079.0</td>
+      <td>853156.0</td>
+      <td>496929.0</td>
+    </tr>
+    <tr>
+      <th>EDU_3</th>
+      <td>1957.0</td>
+      <td>1958.0</td>
+      <td>72790.0</td>
+      <td>271471.0</td>
+      <td>147804.0</td>
+    </tr>
+    <tr>
+      <th>EDU_4</th>
+      <td>NaN</td>
+      <td>1973.0</td>
+      <td>102148.0</td>
+      <td>377700.0</td>
+      <td>192865.0</td>
+    </tr>
+  </tbody>
+</table>
+    </table>
+
+    </body>
+    </html>
+    
