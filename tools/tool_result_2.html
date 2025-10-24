@@ -14,13 +14,18 @@ table {
   max-width: 100%;
   margin-top: 10px;
   table-layout: auto;
-  font-size: 14px;
+  font-size: 13px;
 }
 th, td {
   border: 1px solid #aaa;
   padding: 4px 8px;
-  text-align: left;
   white-space: nowrap;
+}
+th {
+  text-align: left;
+}
+td {
+  text-align: right;
 }
 th.index-name, th.col-heading {
   text-align: left;
@@ -41,19 +46,15 @@ th.agg-info, th.col-attr {
     <h2>Set Summary</h2>
     
         <h3>Table 1</h3>
-        <p>Sum of Year Birth grouped by Marital Status</p>
+        <p>Sum of Year Birth group by Marital Status</p>
         <table class="dataframe">
           <thead>
           <tr>
-            <th class="agg-info">sum of Income</th>
+            <th class="agg-info">Sum of Year Birth</th>
             <th class="col-attr" colspan="1"></th>
           </tr>
         <tr><th class='index-name'>Marital Status</th><th class='col-heading'>Year Birth</th></tr></thead>
           
-    <tr>
-      <th>Absurd</th>
-      <td>3950</td>
-    </tr>
     <tr>
       <th>Alone</th>
       <td>5919</td>
@@ -87,11 +88,11 @@ th.agg-info, th.col-attr {
         </table>
         
         <h3>Table 2</h3>
-        <p>Sum of Year Birth grouped by Education</p>
+        <p>Sum of Year Birth group by Education</p>
         <table class="dataframe">
           <thead>
           <tr>
-            <th class="agg-info">sum of Income</th>
+            <th class="agg-info">Sum of Year Birth</th>
             <th class="col-attr" colspan="1"></th>
           </tr>
         <tr><th class='index-name'>Education</th><th class='col-heading'>Year Birth</th></tr></thead>
@@ -106,11 +107,11 @@ th.agg-info, th.col-attr {
     </tr>
     <tr>
       <th>Bachelor</th>
-      <td>2219779</td>
+      <td>2217786</td>
     </tr>
     <tr>
       <th>Master</th>
-      <td>727745</td>
+      <td>725788</td>
     </tr>
     <tr>
       <th>PhD</th>
@@ -121,34 +122,34 @@ th.agg-info, th.col-attr {
         </table>
         
         <h3>Table 3</h3>
-        <p>Sum of Income grouped by Education</p>
+        <p>Sum of Income group by Education</p>
         <table class="dataframe">
           <thead>
           <tr>
-            <th class="agg-info">sum of Income</th>
+            <th class="agg-info">Sum of Income</th>
             <th class="col-attr" colspan="1"></th>
           </tr>
         <tr><th class='index-name'>Education</th><th class='col-heading'>Income</th></tr></thead>
           
     <tr>
       <th>High School</th>
-      <td>9,526,638</td>
+      <td>9.53M</td>
     </tr>
     <tr>
       <th>Some College</th>
-      <td>1,096,538</td>
+      <td>1.10M</td>
     </tr>
     <tr>
       <th>Bachelor</th>
-      <td>58,835,937</td>
+      <td>58.76M</td>
     </tr>
     <tr>
       <th>Master</th>
-      <td>19,314,900</td>
+      <td>19.25M</td>
     </tr>
     <tr>
       <th>PhD</th>
-      <td>27,005,896</td>
+      <td>27.01M</td>
     </tr>
   </tbody>
 </table>

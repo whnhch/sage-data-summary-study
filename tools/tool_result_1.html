@@ -14,13 +14,18 @@ table {
   max-width: 100%;
   margin-top: 10px;
   table-layout: auto;
-  font-size: 14px;
+  font-size: 13px;
 }
 th, td {
   border: 1px solid #aaa;
   padding: 4px 8px;
-  text-align: left;
   white-space: nowrap;
+}
+th {
+  text-align: left;
+}
+td {
+  text-align: right;
 }
 th.index-name, th.col-heading {
   text-align: left;
@@ -41,23 +46,15 @@ th.agg-info, th.col-attr {
     <h2>Set Summary</h2>
     
         <h3>Table 1</h3>
-        <p>Count of Year Birth by Marital Status</p>
+        <p>Count of Year Birth group by Marital Status</p>
         <table class="dataframe">
           <thead>
           <tr>
-            <th class="agg-info">count of Year Birth</th>
+            <th class="agg-info">Count of Year Birth</th>
             <th class="col-attr" colspan="1"></th>
           </tr>
         <tr><th class='index-name'>Marital Status</th><th class='col-heading'>Year Birth</th></tr></thead>
           
-    <tr>
-      <th>Absurd</th>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>Alone</th>
-      <td>3</td>
-    </tr>
     <tr>
       <th>Divorced</th>
       <td>232</td>
@@ -67,16 +64,16 @@ th.agg-info, th.col-attr {
       <td>864</td>
     </tr>
     <tr>
+      <th>Separated</th>
+      <td>580</td>
+    </tr>
+    <tr>
       <th>Single</th>
       <td>480</td>
     </tr>
     <tr>
-      <th>Together</th>
-      <td>580</td>
-    </tr>
-    <tr>
       <th>Widow</th>
-      <td>77</td>
+      <td>80</td>
     </tr>
     <tr>
       <th>YOLO</th>
@@ -87,103 +84,93 @@ th.agg-info, th.col-attr {
         </table>
         
         <h3>Table 2</h3>
-        <p>Sum of income by Education</p>
+        <p>Sum of income group by Education</p>
         <table class="dataframe">
           <thead>
           <tr>
-            <th class="agg-info">sum of Income</th>
+            <th class="agg-info">Sum of Income</th>
             <th class="col-attr" colspan="1"></th>
           </tr>
         <tr><th class='index-name'>Education</th><th class='col-heading'>Income</th></tr></thead>
           
     <tr>
       <th>High School</th>
-      <td>9,526,638</td>
+      <td>9.53M</td>
     </tr>
     <tr>
       <th>Some College</th>
-      <td>1,096,538</td>
+      <td>1.10M</td>
     </tr>
     <tr>
       <th>Bachelor</th>
-      <td>58,835,937</td>
+      <td>58.76M</td>
     </tr>
     <tr>
       <th>Master</th>
-      <td>19,314,900</td>
+      <td>19.25M</td>
     </tr>
     <tr>
       <th>PhD</th>
-      <td>27,005,896</td>
+      <td>27.01M</td>
     </tr>
   </tbody>
 </table>
         </table>
         
         <h3>Table 3</h3>
-        <p>Count of Year Birth by Education and Marital Status</p>
+        <p>Count of Year Birth group by Education and Marital Status</p>
         <table class="dataframe">
           <thead>
           <tr>
-            <th class="agg-info">count of Year Birth</th>
-            <th class="col-attr" colspan="8">Marital Status</th>
+            <th class="agg-info">Count of Year Birth</th>
+            <th class="col-attr" colspan="6">Marital Status</th>
           </tr>
-        <tr><th class='index-name'>Education</th><th class='col-heading'>Absurd</th><th class='col-heading'>Alone</th><th class='col-heading'>Divorced</th><th class='col-heading'>Married</th><th class='col-heading'>Single</th><th class='col-heading'>Together</th><th class='col-heading'>Widow</th><th class='col-heading'>YOLO</th></tr></thead>
+        <tr><th class='index-name'>Education</th><th class='col-heading'>Divorced</th><th class='col-heading'>Married</th><th class='col-heading'>Separated</th><th class='col-heading'>Single</th><th class='col-heading'>Widow</th><th class='col-heading'>YOLO</th></tr></thead>
           
     <tr>
       <th>High School</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>23.0</td>
-      <td>81.0</td>
-      <td>37.0</td>
-      <td>57.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
+      <td>23</td>
+      <td>81</td>
+      <td>57</td>
+      <td>37</td>
+      <td>5</td>
+      <td>Null</td>
     </tr>
     <tr>
       <th>Some College</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>20.0</td>
-      <td>18.0</td>
-      <td>14.0</td>
-      <td>1.0</td>
-      <td>NaN</td>
+      <td>1</td>
+      <td>20</td>
+      <td>14</td>
+      <td>18</td>
+      <td>1</td>
+      <td>Null</td>
     </tr>
     <tr>
       <th>Bachelor</th>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>119.0</td>
-      <td>433.0</td>
-      <td>252.0</td>
-      <td>286.0</td>
-      <td>35.0</td>
-      <td>NaN</td>
+      <td>119</td>
+      <td>433</td>
+      <td>286</td>
+      <td>252</td>
+      <td>36</td>
+      <td>Null</td>
     </tr>
     <tr>
       <th>Master</th>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>37.0</td>
-      <td>138.0</td>
-      <td>75.0</td>
-      <td>106.0</td>
-      <td>12.0</td>
-      <td>NaN</td>
+      <td>37</td>
+      <td>138</td>
+      <td>106</td>
+      <td>75</td>
+      <td>13</td>
+      <td>Null</td>
     </tr>
     <tr>
       <th>PhD</th>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>52.0</td>
-      <td>192.0</td>
-      <td>98.0</td>
-      <td>117.0</td>
-      <td>24.0</td>
-      <td>2.0</td>
+      <td>52</td>
+      <td>192</td>
+      <td>117</td>
+      <td>98</td>
+      <td>25</td>
+      <td>2</td>
     </tr>
   </tbody>
 </table>
