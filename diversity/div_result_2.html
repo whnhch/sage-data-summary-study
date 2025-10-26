@@ -23,16 +23,28 @@ th, td {
 }
 th {
   text-align: left;
+  font-weight: normal;
 }
 td {
   text-align: right;
 }
-th.index-name, th.col-heading {
+th.index-name {
   text-align: left;
+  font-weight: bold;
   background-color: #f7f7f7;
 }
-th.agg-info, th.col-attr {
+th.col-heading {
   text-align: left;
+  background-color: #f7f7f7;
+  font-weight: normal;
+}
+th.agg-info {
+  text-align: left;
+  font-weight: bold;
+  background-color: #e9e9e9;
+}
+th.col-attr {
+  text-align: center;
   font-weight: bold;
   background-color: #e9e9e9;
 }
@@ -40,136 +52,210 @@ th.agg-info, th.col-attr {
   display: block;
   overflow-x: auto;
 }
+.table-wrapper { 
+    width: max-content; 
+    max-width: 100%; 
+    display: block; 
+}
+.table-metadata-summary { 
+    margin-top: 0;
+    text-align: center;
+    padding: 6px 10px;
+    font-size: 12px;
+    color: #333;
+}
+.dataframe tbody th {
+    font-weight: normal;
+}
 </style>
 </head>
     <body>
     <h2>Set Summary</h2>
     
         <h3>Table 1</h3>
-        <p>Count of ID group by Marital Status</p>
-        <table class="dataframe">
-          <thead>
+        <p>Count of ID group by Marital Status and Education Level</p>
+        <div class="table-wrapper">
+            <div class="dataframe">
+                <table>
+                <thead>
           <tr>
-            <th class="agg-info">Count of ID</th>
-            <th class="col-attr" colspan="1"></th>
+            <th class="agg-info"></th>
+            <th class="col-attr" colspan="5">Education Level</th>
           </tr>
-        <tr><th class='index-name'>Marital Status</th><th class='col-heading'>ID</th></tr></thead>
-          
+        <tr><th class='index-name'>Marital Status</th><th class='col-heading'>2n Cycle</th><th class='col-heading'>Basic</th><th class='col-heading'>Graduation</th><th class='col-heading'>Master</th><th class='col-heading'>PhD</th></tr></thead>
+                
     <tr>
       <th>Divorced</th>
-      <td>232</td>
+      <td>23.0</td>
+      <td>1.0</td>
+      <td>119.0</td>
+      <td>37.0</td>
+      <td>52.0</td>
     </tr>
     <tr>
       <th>Married</th>
-      <td>864</td>
+      <td>81.0</td>
+      <td>20.0</td>
+      <td>433.0</td>
+      <td>138.0</td>
+      <td>192.0</td>
     </tr>
     <tr>
       <th>Separated</th>
-      <td>580</td>
+      <td>57.0</td>
+      <td>14.0</td>
+      <td>286.0</td>
+      <td>106.0</td>
+      <td>117.0</td>
     </tr>
     <tr>
       <th>Single</th>
-      <td>480</td>
+      <td>37.0</td>
+      <td>18.0</td>
+      <td>252.0</td>
+      <td>75.0</td>
+      <td>98.0</td>
     </tr>
     <tr>
       <th>Widow</th>
-      <td>80</td>
+      <td>5.0</td>
+      <td>1.0</td>
+      <td>36.0</td>
+      <td>13.0</td>
+      <td>25.0</td>
     </tr>
     <tr>
       <th>YOLO</th>
-      <td>2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2.0</td>
     </tr>
   </tbody>
 </table>
-        </table>
+                </table>
+            </div>
+        
+        <div class="table-metadata-summary">
+            <strong>Count of ID </strong> <br/>
+        </div>
+        
+        </div>
         
         <h3>Table 2</h3>
-        <p>Minimum of Year Birth group by Education</p>
-        <table class="dataframe">
-          <thead>
+        <p>Average Income group by Birth Decade and Gender</p>
+        <div class="table-wrapper">
+            <div class="dataframe">
+                <table>
+                <thead>
           <tr>
-            <th class="agg-info">Minimum of Year Birth</th>
-            <th class="col-attr" colspan="1"></th>
+            <th class="agg-info"></th>
+            <th class="col-attr" colspan="2">Gender</th>
           </tr>
-        <tr><th class='index-name'>Education</th><th class='col-heading'>Year Birth</th></tr></thead>
-          
+        <tr><th class='index-name'>Birth Decade</th><th class='col-heading'>Female</th><th class='col-heading'>Male</th></tr></thead>
+                
     <tr>
-      <th>High School</th>
-      <td>1893</td>
+      <th>1890s</th>
+      <td>71857.000000</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>Some College</th>
-      <td>1947</td>
+      <th>1900s</th>
+      <td>NaN</td>
+      <td>36640.000000</td>
     </tr>
     <tr>
-      <th>Bachelor</th>
-      <td>1944</td>
+      <th>1940s</th>
+      <td>63918.441176</td>
+      <td>64217.710526</td>
     </tr>
     <tr>
-      <th>Master</th>
-      <td>1943</td>
+      <th>1950s</th>
+      <td>55064.716738</td>
+      <td>58127.465753</td>
     </tr>
     <tr>
-      <th>PhD</th>
-      <td>1899</td>
+      <th>1960s</th>
+      <td>52540.631373</td>
+      <td>54787.356275</td>
+    </tr>
+    <tr>
+      <th>1970s</th>
+      <td>48273.760218</td>
+      <td>51638.756831</td>
+    </tr>
+    <tr>
+      <th>1980s</th>
+      <td>46484.259804</td>
+      <td>45016.025974</td>
+    </tr>
+    <tr>
+      <th>1990s</th>
+      <td>45871.342857</td>
+      <td>61630.240000</td>
     </tr>
   </tbody>
 </table>
-        </table>
+                </table>
+            </div>
+        
+        <div class="table-metadata-summary">
+            <strong>Average of Birth Year </strong> <br/>
+        </div>
+        
+        </div>
         
         <h3>Table 3</h3>
-        <p>Average of Income group by Education and Marital Status</p>
-        <table class="dataframe">
-          <thead>
+        <p>Maximum Years of Experience group by Location and Job Role</p>
+        <div class="table-wrapper">
+            <div class="dataframe">
+                <table>
+                <thead>
           <tr>
-            <th class="agg-info">Average of Income</th>
-            <th class="col-attr" colspan="5">Marital Status</th>
+            <th class="agg-info"></th>
+            <th class="col-attr" colspan="4">Job Role</th>
           </tr>
-        <tr><th class='index-name'>Education</th><th class='col-heading'>Divorced</th><th class='col-heading'>Married</th><th class='col-heading'>Separated</th><th class='col-heading'>Single</th><th class='col-heading'>Widow</th></tr></thead>
-          
+        <tr><th class='index-name'>Location</th><th class='col-heading'>Clerk</th><th class='col-heading'>Engineer</th><th class='col-heading'>Manager</th><th class='col-heading'>Sales</th></tr></thead>
+                
     <tr>
-      <th>High School</th>
-      <td>49.40K</td>
-      <td>46.20K</td>
-      <td>44.74K</td>
-      <td>53.67K</td>
-      <td>51.39K</td>
+      <th>Ogden</th>
+      <td>83.00</td>
+      <td>80.00</td>
+      <td>131.00</td>
+      <td>78.00</td>
     </tr>
     <tr>
-      <th>Some College</th>
-      <td>9.55K</td>
-      <td>21.96K</td>
-      <td>21.24K</td>
-      <td>18.24K</td>
-      <td>22.12K</td>
+      <th>Provo</th>
+      <td>78.00</td>
+      <td>81.00</td>
+      <td>78.00</td>
+      <td>80.00</td>
     </tr>
     <tr>
-      <th>Bachelor</th>
-      <td>54.53K</td>
-      <td>50.80K</td>
-      <td>55.76K</td>
-      <td>51.32K</td>
-      <td>54.40K</td>
+      <th>SLC</th>
+      <td>81.00</td>
+      <td>124.00</td>
+      <td>125.00</td>
+      <td>81.00</td>
     </tr>
     <tr>
-      <th>Master</th>
-      <td>50.33K</td>
-      <td>53.29K</td>
-      <td>52.11K</td>
-      <td>53.53K</td>
-      <td>58.65K</td>
-    </tr>
-    <tr>
-      <th>PhD</th>
-      <td>53.10K</td>
-      <td>58.14K</td>
-      <td>56.04K</td>
-      <td>53.31K</td>
-      <td>59.31K</td>
+      <th>Tooele</th>
+      <td>78.00</td>
+      <td>84.00</td>
+      <td>81.00</td>
+      <td>81.00</td>
     </tr>
   </tbody>
 </table>
-        </table>
+                </table>
+            </div>
+        
+        <div class="table-metadata-summary">
+            <strong>Maximum of Years of Experience </strong> <br/>
+        </div>
+        
+        </div>
         
     </body>
     </html>
