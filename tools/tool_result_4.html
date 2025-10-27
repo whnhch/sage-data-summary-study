@@ -23,22 +23,53 @@ th, td {
 }
 th {
   text-align: left;
+  font-weight: normal;
 }
 td {
   text-align: right;
 }
-th.index-name, th.col-heading {
+th.index-name {
   text-align: left;
+  font-weight: bold;
   background-color: #f7f7f7;
 }
-th.agg-info, th.col-attr {
+th.col-heading {
+  text-align: left;
+  background-color: #f7f7f7;
+  font-weight: normal;
+}
+th.agg-info {
   text-align: left;
   font-weight: bold;
   background-color: #e9e9e9;
 }
+th.col-attr {
+  text-align: center;
+  font-weight: bold;
+  background-color: #e9e9e9;
+}
+.last-table th.col-attr {
+  text-align: left;
+}
 .dataframe {
   display: block;
   overflow-x: auto;
+}
+.table-wrapper { 
+    width: max-content; 
+    max-width: 100%; 
+    display: block; 
+}
+
+.table-metadata-summary { 
+    margin-top: 0;
+    text-align: center;
+    padding: 6px 10px;
+    font-size: 12px;
+    color: #333;
+}
+.dataframe tbody th {
+    font-weight: normal;
 }
 </style>
 </head>
@@ -46,190 +77,197 @@ th.agg-info, th.col-attr {
     <h2>Set Summary</h2>
     
         <h3>Table 1</h3>
-        <p>Sum of Income group by Marital Status and Education</p>
-        <table class="dataframe">
-          <thead>
+        <p>SUM of Income GROUP BY Marital Status and Education Level</p>
+        <div class="table-wrapper">
+            <div class="dataframe">
+                <table>
+                <thead>
           <tr>
-            <th class="agg-info">Sum of Income</th>
-            <th class="col-attr" colspan="5"></th>
+            <th class="agg-info"></th>
+            <th class="col-attr" colspan="5">Education Level</th>
           </tr>
-        <tr><th class='index-name'>Marital Status</th><th class='col-heading'>2n Cycle</th><th class='col-heading'>Basic</th><th class='col-heading'>Graduation</th><th class='col-heading'>Master</th><th class='col-heading'>PhD</th></tr></thead>
-          
+        <tr><th class='index-name'>Marital Status</th><th class='col-heading'>High School</th><th class='col-heading'>Some College</th><th class='col-heading'>Bachelor</th><th class='col-heading'>Master</th><th class='col-heading'>PhD</th></tr></thead>
+                
     <tr>
       <th>Divorced</th>
-      <td>1136088</td>
-      <td>9548</td>
-      <td>6488599</td>
-      <td>1862282</td>
-      <td>2761024</td>
+      <td>1.14M</td>
+      <td>10K</td>
+      <td>6.49M</td>
+      <td>1.86M</td>
+      <td>2.76M</td>
     </tr>
     <tr>
       <th>Married</th>
-      <td>3696088</td>
-      <td>439210</td>
-      <td>21793311</td>
-      <td>7353472</td>
-      <td>11046226</td>
+      <td>3.70M</td>
+      <td>439K</td>
+      <td>21.79M</td>
+      <td>7.35M</td>
+      <td>11.05M</td>
     </tr>
     <tr>
       <th>Separated</th>
-      <td>2505239</td>
-      <td>297361</td>
-      <td>15891167</td>
-      <td>5315119</td>
-      <td>6500805</td>
+      <td>2.51M</td>
+      <td>297K</td>
+      <td>15.89M</td>
+      <td>5.32M</td>
+      <td>6.50M</td>
     </tr>
     <tr>
       <th>Single</th>
-      <td>1932262</td>
-      <td>328296</td>
-      <td>12625257</td>
-      <td>4014792</td>
-      <td>5118203</td>
+      <td>1.93M</td>
+      <td>328K</td>
+      <td>12.63M</td>
+      <td>4.01M</td>
+      <td>5.12M</td>
     </tr>
     <tr>
       <th>Widow</th>
-      <td>256961</td>
-      <td>22123</td>
-      <td>1958359</td>
-      <td>703748</td>
-      <td>1482774</td>
-    </tr>
-    <tr>
-      <th>YOLO</th>
-      <td>Null</td>
-      <td>Null</td>
-      <td>Null</td>
-      <td>Null</td>
-      <td>96864</td>
+      <td>257K</td>
+      <td>22K</td>
+      <td>1.96M</td>
+      <td>704K</td>
+      <td>1.48M</td>
     </tr>
   </tbody>
 </table>
-        </table>
+                </table>
+            </div>
+        
+        <div class="table-metadata-summary">
+            <strong>SUM of Income </strong> <br/>
+        </div>
+        
+        </div>
         
         <h3>Table 2</h3>
-        <p>Sum of Income group by Education and Marital Status</p>
-        <table class="dataframe">
-          <thead>
+        <p>SUM of Income GROUP BY Education Level and Marital Status</p>
+        <div class="table-wrapper">
+            <div class="dataframe">
+                <table>
+                <thead>
           <tr>
-            <th class="agg-info">Sum of Income</th>
-            <th class="col-attr" colspan="6"></th>
+            <th class="agg-info"></th>
+            <th class="col-attr" colspan="5">Marital Status</th>
           </tr>
-        <tr><th class='index-name'>Education</th><th class='col-heading'>Divorced</th><th class='col-heading'>Married</th><th class='col-heading'>Separated</th><th class='col-heading'>Single</th><th class='col-heading'>Widow</th><th class='col-heading'>YOLO</th></tr></thead>
-          
+        <tr><th class='index-name'>Education Level</th><th class='col-heading'>Divorced</th><th class='col-heading'>Married</th><th class='col-heading'>Separated</th><th class='col-heading'>Single</th><th class='col-heading'>Widow</th></tr></thead>
+                
     <tr>
       <th>High School</th>
-      <td>1136088</td>
-      <td>3696088</td>
-      <td>2505239</td>
-      <td>1932262</td>
-      <td>256961</td>
-      <td>Null</td>
+      <td>1.14M</td>
+      <td>3.70M</td>
+      <td>2.51M</td>
+      <td>1.93M</td>
+      <td>257K</td>
     </tr>
     <tr>
       <th>Some College</th>
-      <td>9548</td>
-      <td>439210</td>
-      <td>297361</td>
-      <td>328296</td>
-      <td>22123</td>
-      <td>Null</td>
+      <td>10K</td>
+      <td>439K</td>
+      <td>297K</td>
+      <td>328K</td>
+      <td>22K</td>
     </tr>
     <tr>
       <th>Bachelor</th>
-      <td>6488599</td>
-      <td>21793311</td>
-      <td>15891167</td>
-      <td>12625257</td>
-      <td>1958359</td>
-      <td>Null</td>
+      <td>6.49M</td>
+      <td>21.79M</td>
+      <td>15.89M</td>
+      <td>12.63M</td>
+      <td>1.96M</td>
     </tr>
     <tr>
       <th>Master</th>
-      <td>1862282</td>
-      <td>7353472</td>
-      <td>5315119</td>
-      <td>4014792</td>
-      <td>703748</td>
-      <td>Null</td>
+      <td>1.86M</td>
+      <td>7.35M</td>
+      <td>5.32M</td>
+      <td>4.01M</td>
+      <td>704K</td>
     </tr>
     <tr>
       <th>PhD</th>
-      <td>2761024</td>
-      <td>11046226</td>
-      <td>6500805</td>
-      <td>5118203</td>
-      <td>1482774</td>
-      <td>96864</td>
+      <td>2.76M</td>
+      <td>11.05M</td>
+      <td>6.50M</td>
+      <td>5.12M</td>
+      <td>1.48M</td>
     </tr>
   </tbody>
 </table>
-        </table>
+                </table>
+            </div>
+        
+        <div class="table-metadata-summary">
+            <strong>SUM of Income </strong> <br/>
+        </div>
+        
+        </div>
         
         <h3>Table 3</h3>
-        <p>Sum of Income group by Marital Status and Year Birth</p>
-        <table class="dataframe">
-          <thead>
+        <p>SUM of Income GROUP BY Marital Status and Year Birth</p>
+        <div class="table-wrapper last-table">
+            <div class="dataframe">
+                <table>
+                <thead>
           <tr>
-            <th class="agg-info">Sum of Income</th>
-            <th class="col-attr" colspan="59"></th>
+            <th class="agg-info"></th>
+            <th class="col-attr" colspan="59">Year Birth</th>
           </tr>
         <tr><th class='index-name'>Marital Status</th><th class='col-heading'>1893</th><th class='col-heading'>1899</th><th class='col-heading'>1900</th><th class='col-heading'>1940</th><th class='col-heading'>1941</th><th class='col-heading'>1943</th><th class='col-heading'>1944</th><th class='col-heading'>1945</th><th class='col-heading'>1946</th><th class='col-heading'>1947</th><th class='col-heading'>1948</th><th class='col-heading'>1949</th><th class='col-heading'>1950</th><th class='col-heading'>1951</th><th class='col-heading'>1952</th><th class='col-heading'>1953</th><th class='col-heading'>1954</th><th class='col-heading'>1955</th><th class='col-heading'>1956</th><th class='col-heading'>1957</th><th class='col-heading'>1958</th><th class='col-heading'>1959</th><th class='col-heading'>1960</th><th class='col-heading'>1961</th><th class='col-heading'>1962</th><th class='col-heading'>1963</th><th class='col-heading'>1964</th><th class='col-heading'>1965</th><th class='col-heading'>1966</th><th class='col-heading'>1967</th><th class='col-heading'>1968</th><th class='col-heading'>1969</th><th class='col-heading'>1970</th><th class='col-heading'>1971</th><th class='col-heading'>1972</th><th class='col-heading'>1973</th><th class='col-heading'>1974</th><th class='col-heading'>1975</th><th class='col-heading'>1976</th><th class='col-heading'>1977</th><th class='col-heading'>1978</th><th class='col-heading'>1979</th><th class='col-heading'>1980</th><th class='col-heading'>1981</th><th class='col-heading'>1982</th><th class='col-heading'>1983</th><th class='col-heading'>1984</th><th class='col-heading'>1985</th><th class='col-heading'>1986</th><th class='col-heading'>1987</th><th class='col-heading'>1988</th><th class='col-heading'>1989</th><th class='col-heading'>1990</th><th class='col-heading'>1991</th><th class='col-heading'>1992</th><th class='col-heading'>1993</th><th class='col-heading'>1994</th><th class='col-heading'>1995</th><th class='col-heading'>1996</th></tr></thead>
-          
+                
     <tr>
       <th>Divorced</th>
       <td>0</td>
       <td>0</td>
-      <td>36.64K</td>
+      <td>37K</td>
       <td>0</td>
       <td>0</td>
-      <td>97.90K</td>
-      <td>55.61K</td>
+      <td>98K</td>
+      <td>56K</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>45.07K</td>
-      <td>120.52K</td>
-      <td>226.51K</td>
-      <td>122.98K</td>
-      <td>485.24K</td>
-      <td>122.78K</td>
-      <td>755.56K</td>
-      <td>245.47K</td>
-      <td>125.94K</td>
-      <td>172.97K</td>
-      <td>297.52K</td>
-      <td>468.98K</td>
-      <td>348.36K</td>
-      <td>146.50K</td>
-      <td>500.20K</td>
-      <td>475.73K</td>
-      <td>348.23K</td>
-      <td>301.69K</td>
-      <td>271.56K</td>
-      <td>480.79K</td>
-      <td>745.89K</td>
-      <td>151.90K</td>
-      <td>674.82K</td>
-      <td>605.24K</td>
-      <td>158.95K</td>
-      <td>505.71K</td>
-      <td>319.45K</td>
-      <td>642.57K</td>
-      <td>651.67K</td>
-      <td>249.87K</td>
-      <td>389.09K</td>
-      <td>145.84K</td>
-      <td>160.49K</td>
-      <td>85.49K</td>
+      <td>45K</td>
+      <td>121K</td>
+      <td>227K</td>
+      <td>123K</td>
+      <td>485K</td>
+      <td>123K</td>
+      <td>756K</td>
+      <td>245K</td>
+      <td>126K</td>
+      <td>173K</td>
+      <td>298K</td>
+      <td>469K</td>
+      <td>348K</td>
+      <td>146K</td>
+      <td>500K</td>
+      <td>476K</td>
+      <td>348K</td>
+      <td>302K</td>
+      <td>272K</td>
+      <td>481K</td>
+      <td>746K</td>
+      <td>152K</td>
+      <td>675K</td>
+      <td>605K</td>
+      <td>159K</td>
+      <td>506K</td>
+      <td>319K</td>
+      <td>643K</td>
+      <td>652K</td>
+      <td>250K</td>
+      <td>389K</td>
+      <td>146K</td>
+      <td>160K</td>
+      <td>85K</td>
       <td>0</td>
-      <td>172.71K</td>
+      <td>173K</td>
       <td>0</td>
       <td>0</td>
-      <td>63.26K</td>
-      <td>224.51K</td>
-      <td>35.39K</td>
-      <td>21.96K</td>
+      <td>63K</td>
+      <td>225K</td>
+      <td>35K</td>
+      <td>22K</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -244,33 +282,33 @@ th.agg-info, th.col-attr {
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>93.03K</td>
-      <td>140.94K</td>
-      <td>282.00K</td>
-      <td>205.96K</td>
-      <td>401.02K</td>
-      <td>175.99K</td>
-      <td>577.04K</td>
-      <td>805.96K</td>
-      <td>397.06K</td>
+      <td>93K</td>
+      <td>141K</td>
+      <td>282K</td>
+      <td>206K</td>
+      <td>401K</td>
+      <td>176K</td>
+      <td>577K</td>
+      <td>806K</td>
+      <td>397K</td>
       <td>1.04M</td>
-      <td>669.48K</td>
-      <td>672.15K</td>
+      <td>669K</td>
+      <td>672K</td>
       <td>1.28M</td>
       <td>1.11M</td>
       <td>1.20M</td>
       <td>1.03M</td>
-      <td>629.50K</td>
+      <td>630K</td>
       <td>1.03M</td>
-      <td>894.99K</td>
-      <td>703.29K</td>
-      <td>706.10K</td>
-      <td>591.93K</td>
+      <td>895K</td>
+      <td>703K</td>
+      <td>706K</td>
+      <td>592K</td>
       <td>1.12M</td>
       <td>2.13M</td>
-      <td>696.61K</td>
-      <td>721.99K</td>
-      <td>740.37K</td>
+      <td>697K</td>
+      <td>722K</td>
+      <td>740K</td>
       <td>1.54M</td>
       <td>1.42M</td>
       <td>1.63M</td>
@@ -281,147 +319,147 @@ th.agg-info, th.col-attr {
       <td>1.33M</td>
       <td>1.24M</td>
       <td>1.53M</td>
-      <td>649.31K</td>
+      <td>649K</td>
       <td>1.01M</td>
-      <td>581.95K</td>
-      <td>953.46K</td>
-      <td>883.13K</td>
-      <td>793.25K</td>
-      <td>570.99K</td>
-      <td>876.42K</td>
-      <td>281.51K</td>
-      <td>637.60K</td>
-      <td>438.42K</td>
-      <td>356.08K</td>
-      <td>94.06K</td>
-      <td>174.13K</td>
+      <td>582K</td>
+      <td>953K</td>
+      <td>883K</td>
+      <td>793K</td>
+      <td>571K</td>
+      <td>876K</td>
+      <td>282K</td>
+      <td>638K</td>
+      <td>438K</td>
+      <td>356K</td>
+      <td>94K</td>
+      <td>174K</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>21.92K</td>
+      <td>22K</td>
     </tr>
     <tr>
       <th>Separated</th>
       <td>0</td>
-      <td>83.53K</td>
+      <td>84K</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>134.45K</td>
-      <td>330.33K</td>
-      <td>622.61K</td>
-      <td>357.86K</td>
-      <td>398.43K</td>
-      <td>511.76K</td>
-      <td>460.84K</td>
-      <td>935.04K</td>
-      <td>744.44K</td>
-      <td>451.80K</td>
-      <td>743.09K</td>
-      <td>989.78K</td>
-      <td>483.38K</td>
+      <td>134K</td>
+      <td>330K</td>
+      <td>623K</td>
+      <td>358K</td>
+      <td>398K</td>
+      <td>512K</td>
+      <td>461K</td>
+      <td>935K</td>
+      <td>744K</td>
+      <td>452K</td>
+      <td>743K</td>
+      <td>990K</td>
+      <td>483K</td>
       <td>1.11M</td>
-      <td>906.57K</td>
-      <td>923.35K</td>
-      <td>576.39K</td>
-      <td>711.51K</td>
-      <td>437.28K</td>
-      <td>302.53K</td>
-      <td>925.58K</td>
-      <td>738.09K</td>
-      <td>695.78K</td>
-      <td>554.95K</td>
+      <td>907K</td>
+      <td>923K</td>
+      <td>576K</td>
+      <td>712K</td>
+      <td>437K</td>
+      <td>303K</td>
+      <td>926K</td>
+      <td>738K</td>
+      <td>696K</td>
+      <td>555K</td>
       <td>1.08M</td>
-      <td>872.10K</td>
+      <td>872K</td>
       <td>1.22M</td>
-      <td>871.05K</td>
-      <td>551.91K</td>
-      <td>829.06K</td>
-      <td>769.50K</td>
+      <td>871K</td>
+      <td>552K</td>
+      <td>829K</td>
+      <td>770K</td>
       <td>1.48M</td>
       <td>1.38M</td>
-      <td>971.50K</td>
-      <td>901.78K</td>
-      <td>261.12K</td>
-      <td>688.93K</td>
-      <td>909.05K</td>
-      <td>434.47K</td>
-      <td>222.54K</td>
-      <td>130.71K</td>
-      <td>498.99K</td>
-      <td>175.70K</td>
-      <td>218.09K</td>
-      <td>314.25K</td>
+      <td>971K</td>
+      <td>902K</td>
+      <td>261K</td>
+      <td>689K</td>
+      <td>909K</td>
+      <td>434K</td>
+      <td>223K</td>
+      <td>131K</td>
+      <td>499K</td>
+      <td>176K</td>
+      <td>218K</td>
+      <td>314K</td>
       <td>0</td>
-      <td>247.45K</td>
-      <td>180.99K</td>
+      <td>247K</td>
+      <td>181K</td>
       <td>0</td>
-      <td>160.82K</td>
+      <td>161K</td>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
       <th>Single</th>
-      <td>60.18K</td>
+      <td>60K</td>
       <td>0</td>
       <td>0</td>
-      <td>51.14K</td>
+      <td>51K</td>
       <td>0</td>
-      <td>77.60K</td>
-      <td>82.72K</td>
-      <td>159.31K</td>
-      <td>227.76K</td>
-      <td>169.17K</td>
-      <td>151.04K</td>
-      <td>26.52K</td>
-      <td>65.58K</td>
-      <td>450.52K</td>
-      <td>800.73K</td>
-      <td>345.37K</td>
-      <td>313.16K</td>
-      <td>528.24K</td>
-      <td>639.86K</td>
-      <td>329.48K</td>
-      <td>780.36K</td>
-      <td>228.65K</td>
-      <td>402.54K</td>
-      <td>515.27K</td>
-      <td>611.47K</td>
-      <td>504.19K</td>
-      <td>456.46K</td>
-      <td>657.81K</td>
-      <td>734.79K</td>
-      <td>467.87K</td>
-      <td>363.80K</td>
-      <td>560.61K</td>
-      <td>867.87K</td>
-      <td>637.88K</td>
-      <td>859.27K</td>
-      <td>344.86K</td>
-      <td>541.44K</td>
-      <td>969.59K</td>
-      <td>774.77K</td>
-      <td>378.94K</td>
-      <td>548.11K</td>
-      <td>685.76K</td>
-      <td>516.17K</td>
-      <td>425.64K</td>
-      <td>455.58K</td>
-      <td>477.54K</td>
-      <td>471.26K</td>
-      <td>552.48K</td>
-      <td>338.53K</td>
-      <td>584.28K</td>
-      <td>465.23K</td>
-      <td>450.63K</td>
-      <td>380.47K</td>
-      <td>571.99K</td>
-      <td>266.68K</td>
-      <td>291.45K</td>
-      <td>95.53K</td>
-      <td>304.69K</td>
+      <td>78K</td>
+      <td>83K</td>
+      <td>159K</td>
+      <td>228K</td>
+      <td>169K</td>
+      <td>151K</td>
+      <td>27K</td>
+      <td>66K</td>
+      <td>451K</td>
+      <td>801K</td>
+      <td>345K</td>
+      <td>313K</td>
+      <td>528K</td>
+      <td>640K</td>
+      <td>329K</td>
+      <td>780K</td>
+      <td>229K</td>
+      <td>403K</td>
+      <td>515K</td>
+      <td>611K</td>
+      <td>504K</td>
+      <td>456K</td>
+      <td>658K</td>
+      <td>735K</td>
+      <td>468K</td>
+      <td>364K</td>
+      <td>561K</td>
+      <td>868K</td>
+      <td>638K</td>
+      <td>859K</td>
+      <td>345K</td>
+      <td>541K</td>
+      <td>970K</td>
+      <td>775K</td>
+      <td>379K</td>
+      <td>548K</td>
+      <td>686K</td>
+      <td>516K</td>
+      <td>426K</td>
+      <td>456K</td>
+      <td>478K</td>
+      <td>471K</td>
+      <td>552K</td>
+      <td>339K</td>
+      <td>584K</td>
+      <td>465K</td>
+      <td>451K</td>
+      <td>380K</td>
+      <td>572K</td>
+      <td>267K</td>
+      <td>291K</td>
+      <td>96K</td>
+      <td>305K</td>
       <td>0</td>
     </tr>
     <tr>
@@ -431,42 +469,42 @@ th.agg-info, th.col-attr {
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>57.51K</td>
-      <td>45.01K</td>
-      <td>63.28K</td>
+      <td>58K</td>
+      <td>45K</td>
+      <td>63K</td>
       <td>0</td>
-      <td>93.47K</td>
-      <td>242.49K</td>
-      <td>494.99K</td>
-      <td>254.81K</td>
-      <td>279.22K</td>
-      <td>68.51K</td>
-      <td>138.61K</td>
-      <td>71.97K</td>
-      <td>138.07K</td>
-      <td>160.35K</td>
-      <td>131.52K</td>
-      <td>226.28K</td>
-      <td>177.16K</td>
-      <td>116.82K</td>
-      <td>59.18K</td>
-      <td>154.24K</td>
-      <td>138.77K</td>
-      <td>85.62K</td>
-      <td>105.50K</td>
-      <td>106.98K</td>
+      <td>93K</td>
+      <td>242K</td>
+      <td>495K</td>
+      <td>255K</td>
+      <td>279K</td>
+      <td>69K</td>
+      <td>139K</td>
+      <td>72K</td>
+      <td>138K</td>
+      <td>160K</td>
+      <td>132K</td>
+      <td>226K</td>
+      <td>177K</td>
+      <td>117K</td>
+      <td>59K</td>
+      <td>154K</td>
+      <td>139K</td>
+      <td>86K</td>
+      <td>106K</td>
+      <td>107K</td>
       <td>0</td>
-      <td>73.45K</td>
-      <td>254.37K</td>
-      <td>98.61K</td>
-      <td>153.54K</td>
+      <td>73K</td>
+      <td>254K</td>
+      <td>99K</td>
+      <td>154K</td>
       <td>0</td>
-      <td>180.93K</td>
+      <td>181K</td>
       <td>0</td>
-      <td>164.34K</td>
+      <td>164K</td>
       <td>0</td>
       <td>0</td>
-      <td>54.16K</td>
+      <td>54K</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -476,69 +514,7 @@ th.agg-info, th.col-attr {
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>34.18K</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>YOLO</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>96.86K</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>34K</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -550,7 +526,14 @@ th.agg-info, th.col-attr {
     </tr>
   </tbody>
 </table>
-        </table>
+                </table>
+            </div>
+        
+        <div class="table-metadata-summary">
+            <strong>SUM of Income </strong> <br/>
+        </div>
+        
+        </div>
         
     </body>
     </html>
